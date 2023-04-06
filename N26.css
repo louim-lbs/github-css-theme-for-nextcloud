@@ -285,6 +285,10 @@
       border-radius: 4px !important;
   }
   
+  #app-navigation:not(.vue)>ul>li:hover, #app-navigation:not(.vue)>ul>li>a:hover {
+      border-radius: 4px !important;
+  }
+  
   :root {
      --body-container-margin: 0px;
      --body-container-radius: 0px;
