@@ -300,6 +300,22 @@
       border-radius: 4px !important;
   }
   
+  /* Dashboard Panels */
+  .panel {
+      background-color: rgba(0,0,0,.5) !important;
+  }
+  
+  /* Dashboard Buttons */
+  
+  .user-status-menu-item__toggle.user-status-menu-item__toggle--inline, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary.action-item__menutoggle {
+      background-color: rgba(0,0,0,.5) !important;
+      border-radius: 4px !important;
+  }
+  
+  .user-status-menu-item__toggle.user-status-menu-item__toggle--inline:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover {
+      background-color: #444c56a3 !important;
+  }
+  
   :root {
      --body-container-margin: 0px;
      --body-container-radius: 0px;
