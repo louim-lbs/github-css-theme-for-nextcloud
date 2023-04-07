@@ -312,8 +312,8 @@
       border-radius: 4px !important;
   }
   
-  .user-status-menu-item__toggle.user-status-menu-item__toggle--inline:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover {
-      background-color: #444c56a3 !important;
+  .user-status-menu-item__toggle.user-status-menu-item__toggle--inline:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, action-item__menutoggle:hover {
+      background-color: var(--color-background-hover) !important;
   }
   
   :root {
@@ -324,7 +324,7 @@
      --color-main-background-rgb: 23, 27, 32;
      --color-main-background-blur: #22272e;
      --color-main-header: #2d333b;
-     --color-background-hover: #444c56;
+     --color-background-hover: #444c56a3;
      --color-border: #444c56 !important;
      --color-border-hover: #539bf5 !important;
      --color-border-panel: #373e47 !important;
