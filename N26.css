@@ -269,13 +269,13 @@
   }
   
   /* Input */
-  input, select, textarea, .content-wrapper.text-editor__content-wrapper {
+  input, select, textarea, .content-wrapper.text-editor__content-wrapper, .vs__dropdown-toggle, .multiselect__tags, .comment-form__contenteditable, .rich-contenteditable__input {
       border: 1px solid !important;
       border-color: var(--color-border) !important;
       background-color: var(--color-entry-background) !important;
   }
   
-  input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content-wrapper:hover, input:focus, select:focus, textarea:focus, .content-wrapper.text-editor__content-wrapper:focus, .content-wrapper.text-editor__content-wrapper:active, .content-wrapper.text-editor__content-wrapper:focus-within, .content-wrapper.text-editor__content-wrapper:focus-visible {
+  input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content-wrapper:hover, .vs__dropdown-toggle:hover, .multiselect__tags:hover, .comment-form__contenteditable:hover, .rich-contenteditable__input:hover, input:focus, select:focus, textarea:focus, .content-wrapper.text-editor__content-wrapper:focus, .vs__dropdown-toggle:focus, .multiselect__tags:focus, .comment-form__contenteditable:focus, .rich-contenteditable__input:focus, .content-wrapper.text-editor__content-wrapper:active, .content-wrapper.text-editor__content-wrapper:focus-within, .content-wrapper.text-editor__content-wrapper:focus-visible {
       border-color: var(--color-border-hover) !important;
   }
   
@@ -315,7 +315,27 @@
   .user-status-menu-item__toggle.user-status-menu-item__toggle--inline:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, action-item__menutoggle:hover {
       background-color: var(--color-background-hover) !important;
   }
+
+/* Modal container */
+.modal-container {
+    box-shadow: none !important;
+    border: 1px solid !important;
+    border-color: var(--color-border) !important;
+}
   
+/* Profil page */
+.vs__search, .vs__search:hover {
+    border: 0px solid !important;
+    border-color: none !important;
+    background-color: none !important;
+    background: none !important;
+}
+
+/* Entries & Texts - No borders */
+div.select2-container-multi .select2-choices, div.select2-container-multi.select2-container-active .select2-choices, .multiselect__input, .text-editor__wrapper .text-editor__main .text-editor__content-wrapper, [data-handler=text] {
+    border: 0px solid !important;
+}
+
   :root {
      --body-container-margin: 0px;
      --body-container-radius: 0px;
