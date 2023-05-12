@@ -76,6 +76,12 @@
      background: transparent !important;
      backdrop-filter: none;
   }
+
+
+  /* Header*/
+  #body-public .side-menu-opener {
+     display: none !important;
+  }
   
   /* Deck */
   .card {
@@ -175,6 +181,11 @@
   }
   
   .viewcontainer.hide-hidden-files.has-selection {
+      padding-right: 24px !important;
+      padding-left: 24px !important;
+  }
+
+  #files-public-content {
       padding-right: 24px !important;
       padding-left: 24px !important;
   }
@@ -336,20 +347,42 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
     border: 0px solid !important;
 }
 
+/* Pop-up menus */
+.header-menu__wrapper, .fileActionsMenu.popovermenu.bubble.open.menu, .popovermenu.open, .popovermenu:after, .v-popper__wrapper, .oc-dialog {
+    box-shadow: none !important;
+    background-color: #22272e !important;
+    border: 1px solid !important;
+    border-color: var(--color-border) !important;
+    filter: drop-shadow(0 0px 0px var(--color-box-shadow)) !important;
+    border-radius: 4px !important;
+}
+
+.header-menu__content, .v-popper__inner, .v-popper--theme-dropdown.v-popper__popper {
+    box-shadow: none !important;
+    background-color: #22272e !important;
+    border: 0px solid !important;
+    filter: drop-shadow(0 0px 0px var(--color-box-shadow)) !important;
+    border-radius: 4px !important;
+}
+
   :root {
      --body-container-margin: 0px;
      --body-container-radius: 0px;
      --color-main-background: #1c2128;
-     --color-main-background-translucent: #1c2128;
+     --color-main-background-translucent: var(--color-main-background);
      --color-main-background-rgb: 23, 27, 32;
      --color-main-background-blur: #22272e;
      --color-main-header: #2d333b;
+     --color-background-dark: var(--color-main-background-blur) !important;
      --color-background-hover: #444c56a3;
      --color-border: #444c56 !important;
      --color-border-hover: #539bf5 !important;
      --color-border-panel: #373e47 !important;
      --color-scrollbar: #2d333b;
      --button-color: #347d39;
-     --color-entry-background: #1c2128;
+     --color-entry-background: var(--color-main-background-blur);
+     --color-primary: var(--color-primary-default) !important;
+     --color-primary-element: var(--color-primary-default) !important;
+     --color-primary-light-text: #ffffff !important;
      --folder-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="rgb(123, 131, 143)"><path d="M 1.75 1 A 1.75 1.75 0 0 0 0 2.75 v 10.5 C 0 14.216 0.784 15 1.75 15 h 12.5 A 1.75 1.75 0 0 0 16 13.25 v -8.5 A 1.75 1.75 0 0 0 14.25 3 H 7.5 a 0.25 0.25 0 0 1 -0.2 -0.1 l -0.9 -1.2 C 6.07 1.26 5.55 1 5 1 H 1.75 Z"/></svg>');
   }
