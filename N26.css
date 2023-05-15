@@ -250,20 +250,33 @@
   
   /* Button knew item */
   .button.new {
-      border: 1px solid;
+      border: 0px solid;
       border-radius: 6px;
-      border-color: var(--color-border);
-      color: var(--color-background-hover);
+      color: #fdfdfd !important;
       background-color: var(--button-color);
+      margin-top: 5px !important;
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+      height: 22px !important;
+      min-height: 22px !important;
   }
   
   .button.new:hover {
-      background-color: var(--button-color) !important;
-      border: 1px solid !important;
-      border-radius: 6px !important;
-      border-color: #fdfdfd !important;
+      background-color: var(--color-btn-primary-hover-bg) !important;
+      /* border: 1px solid !important; */
+      /* border-radius: 6px !important; */
+      /* border-color: #fdfdfd !important; */
   }
   
+  .icon-add {
+      color: #fdfdfd !important;
+  }
+
+  .creatable {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+  }
+
   #app-navigation, .app-navigation, .without-app-settings {
       border-right: 1px solid !important;
       border-color: var(--color-border-panel) !important;
@@ -350,7 +363,7 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
 /* Pop-up menus */
 .header-menu__wrapper, .fileActionsMenu.popovermenu.bubble.open.menu, .popovermenu.open, .popovermenu:after, .v-popper__wrapper, .oc-dialog {
     box-shadow: none !important;
-    background-color: #22272e !important;
+    background-color: var(--color-main-background-blur) !important;
     border: 1px solid !important;
     border-color: var(--color-border) !important;
     filter: drop-shadow(0 0px 0px var(--color-box-shadow)) !important;
@@ -359,10 +372,14 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
 
 .header-menu__content, .v-popper__inner, .v-popper--theme-dropdown.v-popper__popper {
     box-shadow: none !important;
-    background-color: #22272e !important;
+    background-color: var(--color-main-background-blur) !important;
     border: 0px solid !important;
     filter: drop-shadow(0 0px 0px var(--color-box-shadow)) !important;
     border-radius: 4px !important;
+}
+
+.notification, .dismiss-all, .unified-search__input-wrapper, .oc-dialog-title, .oc-dialog-buttonrow.twobuttons.aside {
+    background-color: var(--color-main-background-blur) !important;
 }
 
   :root {
@@ -380,6 +397,7 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
      --color-border-panel: #373e47 !important;
      --color-scrollbar: #2d333b;
      --button-color: #347d39;
+     --color-btn-primary-hover-bg: #46954a;
      --color-entry-background: var(--color-main-background-blur);
      --color-primary: var(--color-primary-default) !important;
      --color-primary-element: var(--color-primary-default) !important;
