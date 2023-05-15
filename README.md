@@ -6,4 +6,4 @@ A GitHub inspired CSS theme for Nextcloud.
 
 Written for NC26 and some core apps (e.g. Desk).
 
-Feel free to contibute.
+Feel free to contribute.
