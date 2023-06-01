@@ -498,6 +498,10 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
     position: inherit !important;
 }
 
+.ProseMirror {
+    margin-top: 50px !important;
+}
+
 :root {
     --body-container-margin: 0px;
     --body-container-radius: 0px;
