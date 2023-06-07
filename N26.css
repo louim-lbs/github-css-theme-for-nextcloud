@@ -325,6 +325,22 @@ input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content
     border-radius: 4px !important;
 }
 
+.app-navigation-entry__settings, #app-settings {
+    padding: calc(var(--default-grid-baseline, 4px)*2) !important;
+}
+
+.settings-button {
+    background-color: var(--color-main-background-blur) !important;
+}
+
+.settings-button:hover {
+    background-color: var(--color-background-hover) !important;
+}
+
+#app-settings__header {
+    margin: 0px !important;
+}
+
 /* Dashboard Panels */
 .panel {
     background-color: rgba(0,0,0,.5) !important;
@@ -498,9 +514,9 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
     position: inherit !important;
 }
 
-.ProseMirror {
+/*.ProseMirror {
     margin-top: 50px !important;
-}
+}*/
 
 :root {
     --body-container-margin: 0px;
