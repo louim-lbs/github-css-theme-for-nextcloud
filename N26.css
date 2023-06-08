@@ -1,10 +1,4 @@
 /* Custom CSS edits for NC26 */
-
-/* Override global background blur */
-
-* {
-    --filter-background-blur: blur(8px) !important;
-  }
   
 /* Disable rounded corners, stretch from edge to edge */
 
@@ -449,59 +443,8 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
 
 /* Contacts */
 
-.property__value, #contact-fullname, #contact-org, #contact-title {
-    margin: 3px 3px 3px 8px !important;
-    padding: 7px 6px !important;
-}
-
-.multiselect.property__label.multiselect--single, .multiselect.property__value.multiselect--multiple {
-    min-height: 36px !important;
-}
-
-.property__label.multiselect .multiselect__tags {
-    padding: 7px 6px !important;
-    min-height: 36px !important;
-    height: 36px !important;
-    opacity: 0.9 !important;
-}
-
-.multiselect__single {
-    color: var(--color-main-text) !important;
-    background-color: var(--color-main-background-blur) !important;
-    min-width: 118.545px !important;
-}
-
-.multiselect__input {
-    min-height: 20px !important;
-    height: 20px !important;
-    color: var(--color-main-text) !important;
-}
-
-.multiselect__tags {
-    padding-right: 0px !important;
-}
-
-.multiselect__content-wrapper {
-    margin-top: 1px !important;
-    margin-bottom: 1px !important;
-}
-
-.multiselect.property__label.multiselect--single .multiselect__tags, .multiselect.property__value.multiselect--multiple .multiselect__tags, .multiselect.property__value.multiselect--single .multiselect__tags {
-    min-height: 36px !important;
-    height: 36px !important;
-}
-
-.multiselect.property__value.multiselect--multiple .multiselect__tags {
-    padding-top: 5px !important;
-    padding-left: 5px !important;
-}
-
-.multiselect__tag {
-    border-color: var(--color-border-panel) !important;
-}
-
-.property__title.property__row {
-    padding-bottom: 10px !important;
+.property__value input {
+    padding-left: 10px !important;
 }
 
 /* Announcement */
@@ -519,6 +462,7 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
 }*/
 
 :root {
+    --filter-background-blur: blur(8px) !important;
     --body-container-margin: 0px;
     --body-container-radius: 0px;
     --color-main-background: #1c2128;
