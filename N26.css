@@ -1,10 +1,4 @@
 /* Custom CSS edits for NC26 */
-  
-/* Disable rounded corners, stretch from edge to edge */
-
-#content, .content {
-    border-radius:0 !important;
-}
 
 /* Remove margins for the main content area */
 
@@ -85,7 +79,16 @@ input, textarea, select, .multiselect__tags, .rich-contenteditable__input {
     border-color: var(--color-border) !important;
 }
 
+.icon.due.now {
+    background-color: var(--color-main-header) !important;
+}
+
+.icon.due.overdue {
+    background-color: #7f2e2e !important;
+}
+
 /* Files */
+
 table td.filename .thumbnail[style*="folder"] {
     background-image: var(--folder-icon) !important;
     /* filter: invert(54%) sepia(10%) saturate(405%) hue-rotate(177deg) brightness(92%) */
@@ -158,23 +161,12 @@ table tr[data-has-preview=true] .thumbnail {
     width: 100% !important;
 }
 
-
 #view-toggle {
     position: absolute;
     top: 3px !important;
 }
 
-.viewcontainer.hide-hidden-files.has-comments.has-selection {
-    padding-right: 24px !important;
-    padding-left: 24px !important;
-}
-
-.viewcontainer.hide-hidden-files.has-comments {
-    padding-right: 24px !important;
-    padding-left: 24px !important;
-}
-
-.viewcontainer.hide-hidden-files.has-selection {
+.viewcontainer {
     padding-right: 24px !important;
     padding-left: 24px !important;
 }
@@ -184,7 +176,12 @@ table tr[data-has-preview=true] .thumbnail {
     padding-left: 24px !important;
 }
 
+.name:focus {
+    background-color: var(--color-primary-element-light) !important;
+}
+
 /* Links above files */
+
 div.crumb > a, div.crumb > span {
     color: #749af0 !important;
     opacity: 1 !important;
@@ -294,6 +291,12 @@ input, select, textarea, .content-wrapper.text-editor__content-wrapper, .vs__dro
     border-radius: 4px !important;
 }
 
+/*
+input, .input-field__input{
+    margin: 0px 3px 0px 3px !important;
+    height: 44px !important;
+}*/
+
 input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content-wrapper:hover, .vs__dropdown-toggle:hover, .multiselect__tags:hover, .comment-form__contenteditable:hover, .rich-contenteditable__input:hover, input:focus, select:focus, textarea:focus, .content-wrapper.text-editor__content-wrapper:focus, .vs__dropdown-toggle:focus, .multiselect__tags:focus, .comment-form__contenteditable:focus, .rich-contenteditable__input:focus, .content-wrapper.text-editor__content-wrapper:active, .content-wrapper.text-editor__content-wrapper:focus-within, .content-wrapper.text-editor__content-wrapper:focus-visible, .multiselect.property__label.multiselect--single:hover {
     border-color: var(--color-border-hover) !important;
 }
@@ -349,6 +352,7 @@ input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content
 
 .user-status-menu-item__toggle.user-status-menu-item__toggle--inline:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, action-item__menutoggle:hover, .button.single-alt-login-option:hover, .button-vue.button-vue--text-only.button-vue--vue-tertiary.button-vue--wide:hover {
     background-color: var(--color-background-hover) !important;
+    border-radius: 4px !important;
 }
 
 /* Modal container */
@@ -460,6 +464,89 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
 /*.ProseMirror {
     margin-top: 50px !important;
 }*/
+
+/* Mails*/
+
+/*#message-container {
+    background-color: var(--color-main-background) !important;
+}
+
+.div.WordSection1 {
+    color: #D8D8D8 !important;
+}*/
+
+.envelope--expanded {
+    border: 1px solid !important;
+    border-color: var(--color-border) !important;
+    border-radius: 4px !important;
+}
+
+/* Talk */
+
+.message-buttons-bar {
+    background-color: var(--color-main-background-blur) !important;
+    border: 1px solid !important;
+    border-color: var(--color-border) !important;
+    box-shadow: none !important;
+    height: 45.6px !important;
+}
+
+.button-vue--icon-only {
+    border-radius: 22px !important;
+}
+
+.button-vue--vue-secondary {
+    background-color: var(--color-main-background) !important;
+}
+
+.button-vue--vue-secondary:hover, .icon-menu:hover {
+    background-color: var(--color-background-hover) !important;
+    /* border-radius: 22px !important; */
+}
+
+.button-vue--icon-and-text {
+    background-color: var(--color-background-hover) !important;
+}
+
+.app-navigation-entry__counter {
+    background-color: var(--color-main-background-blur) !important;
+}
+
+.app-navigation-entry:hover .app-navigation-entry__counter {
+    background-color: #444c5600 !important;
+}
+
+/* Photos */
+
+.file-container .file__images img, .file-container .file__images .video-icon, .file-container, .files-list-viewer__placeholder, .material-design-icon.video-icon.video-icon, .file-container.selected::after, .file-container::after {
+    border-radius: 8px !important;
+}
+
+.checkbox-radio-switch, .checkbox-radio-switch:hover, .checkbox-radio-switch__label, .checkbox-radio-switch__label:hover, .checkbox-radio-switch__label:focus, .checkbox-radio-switch__input, .checkbox-radio-switch__input:focus {
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+.material-design-icon__svg  {
+    color: var(--color-primary-light-text) !important;
+}
+
+/* Apps */
+
+.app-level, .official.icon-checkmark {
+    min-width: 137px !important;
+}
+
+/* Public */
+
+#body-public footer {
+    display: none !important;
+}
+
+/* Parameters */
+
+.app-settings__navigation {
+    min-width: 280px !important;
+}
 
 :root {
     --filter-background-blur: blur(8px) !important;
