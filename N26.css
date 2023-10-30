@@ -1,10 +1,4 @@
-/* Custom CSS edits for NC26 */
-  
-/* Disable rounded corners, stretch from edge to edge */
-
-#content, .content {
-    border-radius:0 !important;
-}
+/* Custom CSS edits for NC27 */
 
 /* Remove margins for the main content area */
 
@@ -20,7 +14,7 @@
     (may need some additional classes, as I did not check every detail in the UI) */
 
 input, textarea, select, .multiselect__tags, .rich-contenteditable__input {
-    border-radius: 4px !important;
+    border-radius: var(--border-radius-default) !important;
 }
 
 /* Fix visual glitches with navigation if there is no background image */
@@ -73,28 +67,52 @@ input, textarea, select, .multiselect__tags, .rich-contenteditable__input {
 
 
 /* Header*/
+
 #body-public .side-menu-opener {
     display: none !important;
 }
 
 /* Deck */
+
 .card {
     box-shadow: none !important;
     background-color: #22272e !important;
     border: 1px solid !important;
     border-color: var(--color-border) !important;
+    border-radius: 10px !important;
+}
+
+.icon.due.now {
+    background-color: var(--color-main-header) !important;
+}
+
+.icon.due.overdue {
+    background-color: #7f2e2e !important;
+}
+
+.action.active {
+    border-radius: var(--border-radius-default) !important;
+}
+
+.deck-search input[type=search] {
+    background-position: 12px !important;
 }
 
 /* Files */
+
 table td.filename .thumbnail[style*="folder"] {
     background-image: var(--folder-icon) !important;
-    /* filter: invert(54%) sepia(10%) saturate(405%) hue-rotate(177deg) brightness(92%) */
+    border-radius: 0px !important;
+}
+
+table td.filename .thumbnail {
+    border-radius: 4px !important;
 }
 
 .files-filestable tbody {
     border: 1px solid;
     border-bottom: none !important;
-    border-radius: 6px;
+    border-radius: var(--border-radius-default) !important;
     border-color: var(--color-border);
     background-color: var(--color-main-background-blur);
 }
@@ -108,20 +126,20 @@ table th {
     border-bottom: none !important;
 }
 
-tr:last-child td:first-child {
-    border-bottom-left-radius: 6px !important;
+tr:last-child td:first-child, tr:last-child td:first-child:hover {
+    border-bottom-left-radius: var(--border-radius-default) !important;
 }
 
-tr:last-child td:last-child {
-    border-bottom-right-radius: 6px !important;
+tr:last-child td:last-child, tr:last-child td:last-child:hover  {
+    border-bottom-right-radius: var(--border-radius-default) !important;
 }
 
-tr:first-child td:first-child {
-    border-top-left-radius: 6px !important;
+tr:first-child td:first-child, tr:first-child td:first-child:hover {
+    border-top-left-radius: var(--border-radius-default) !important;
 }
 
-tr:first-child td:last-child {
-    border-top-right-radius: 6px !important;
+tr:first-child td:last-child, tr:first-child td:last-child:hover {
+    border-top-right-radius: var(--border-radius-default) !important;
 }
 
 .tfoot {
@@ -140,11 +158,6 @@ tr:first-child td:last-child {
     background-color: var(--color-background-hover) !important;
 }
 
-table td.filename .thumbnail[style*="folder"] {
-    background-image: var(--folder-icon) !important;
-    /* filter: invert(54%) sepia(10%) saturate(405%) hue-rotate(177deg) brightness(92%) */
-}
-
 table tr[data-has-preview=true] .thumbnail {
     border: none !important;
 }
@@ -158,23 +171,12 @@ table tr[data-has-preview=true] .thumbnail {
     width: 100% !important;
 }
 
-
 #view-toggle {
     position: absolute;
     top: 3px !important;
 }
 
-.viewcontainer.hide-hidden-files.has-comments.has-selection {
-    padding-right: 24px !important;
-    padding-left: 24px !important;
-}
-
-.viewcontainer.hide-hidden-files.has-comments {
-    padding-right: 24px !important;
-    padding-left: 24px !important;
-}
-
-.viewcontainer.hide-hidden-files.has-selection {
+.viewcontainer {
     padding-right: 24px !important;
     padding-left: 24px !important;
 }
@@ -184,7 +186,16 @@ table tr[data-has-preview=true] .thumbnail {
     padding-left: 24px !important;
 }
 
+.name:focus {
+    background-color: var(--color-primary-element-light) !important;
+}
+
+.files-filestable.view-grid:not(.hidden) tbody td.filename .thumbnail-wrapper {
+    z-index: 0 !important;
+}
+
 /* Links above files */
+
 div.crumb > a, div.crumb > span {
     color: #749af0 !important;
     opacity: 1 !important;
@@ -245,7 +256,7 @@ div.crumb span.icon-shared {
 /* Button new item */
 .button.new {
     border: 0px solid;
-    border-radius: 6px;
+    border-radius: var(--border-radius-default);
     color: #fdfdfd !important;
     background-color: var(--button-color);
     margin-top: 5px !important;
@@ -258,7 +269,7 @@ div.crumb span.icon-shared {
 .button.new:hover {
     background-color: var(--color-btn-primary-hover-bg) !important;
     /* border: 1px solid !important; */
-    /* border-radius: 6px !important; */
+    /* border-radius: var(--border-radius-default) !important; */
     /* border-color: #fdfdfd !important; */
 }
 
@@ -291,8 +302,19 @@ input, select, textarea, .content-wrapper.text-editor__content-wrapper, .vs__dro
     border: 1px solid !important;
     border-color: var(--color-border) !important;
     background-color: var(--color-entry-background) !important;
-    border-radius: 4px !important;
+    border-radius: var(--border-radius-default) !important;
+    padding-left: 15px !important;
 }
+
+.vs__dropdown-toggle {
+    padding-left: 8px !important;
+}
+
+/*
+input, .input-field__input{
+    margin: 0px 3px 0px 3px !important;
+    height: 44px !important;
+}*/
 
 input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content-wrapper:hover, .vs__dropdown-toggle:hover, .multiselect__tags:hover, .comment-form__contenteditable:hover, .rich-contenteditable__input:hover, input:focus, select:focus, textarea:focus, .content-wrapper.text-editor__content-wrapper:focus, .vs__dropdown-toggle:focus, .multiselect__tags:focus, .comment-form__contenteditable:focus, .rich-contenteditable__input:focus, .content-wrapper.text-editor__content-wrapper:active, .content-wrapper.text-editor__content-wrapper:focus-within, .content-wrapper.text-editor__content-wrapper:focus-visible, .multiselect.property__label.multiselect--single:hover {
     border-color: var(--color-border-hover) !important;
@@ -305,18 +327,18 @@ input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content
 }
 
 .content-wrapper.text-editor__content-wrapper {
-    border-radius: 6px !important;
+    border-radius: var(--border-radius-default) !important;
 }
 
 /* Menus */
 .app-navigation-entry.router-link-exact-active.active, 
 #app-navigation:not(.vue)>ul>li.active, #app-navigation:not(.vue)>ul>li.active>a, .button.single-alt-login-option, .button-vue.button-vue--text-only.button-vue--vue-secondary.button-vue--wide.register-button, .button-vue.button-vue--text-only.button-vue--vue-tertiary.button-vue--wide {
     background-color: var(--color-main-background) !important;
-    border-radius: 4px !important;
+    border-radius: var(--border-radius-default) !important;
 }
 
 #app-navigation:not(.vue)>ul>li:hover, #app-navigation:not(.vue)>ul>li>a:hover, .button.single-alt-login-option:hover, .button-vue.button-vue--text-only.button-vue--vue-secondary.button-vue--wide.register-button:hover {
-    border-radius: 4px !important;
+    border-radius: var(--border-radius-default) !important;
 }
 
 .app-navigation-entry__settings, #app-settings {
@@ -338,17 +360,23 @@ input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content
 /* Dashboard Panels */
 .panel {
     background-color: rgba(0,0,0,.5) !important;
+    border-radius: var(--border-radius-default) !important;
 }
 
 /* Dashboard Buttons */
 
+.user-status-menu-item__toggle  {
+    border-radius: var(--border-radius-default) !important;
+}
+
 .user-status-menu-item__toggle.user-status-menu-item__toggle--inline, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary.action-item__menutoggle {
     background-color: rgba(0,0,0,.5) !important;
-    border-radius: 4px !important;
+    border-radius: var(--border-radius-default) !important;
 }
 
 .user-status-menu-item__toggle.user-status-menu-item__toggle--inline:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, .button-vue.button-vue--icon-and-text.button-vue--vue-secondary:hover, action-item__menutoggle:hover, .button.single-alt-login-option:hover, .button-vue.button-vue--text-only.button-vue--vue-tertiary.button-vue--wide:hover {
     background-color: var(--color-background-hover) !important;
+    border-radius: var(--border-radius-default) !important;
 }
 
 /* Modal container */
@@ -378,7 +406,7 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
     border: 1px solid !important;
     border-color: var(--color-border) !important;
     filter: drop-shadow(0 0px 0px var(--color-box-shadow)) !important;
-    border-radius: 4px !important;
+    border-radius: var(--border-radius-default) !important;
 }
 
 .header-menu__content, .v-popper__inner, .v-popper--theme-dropdown.v-popper__popper {
@@ -386,7 +414,7 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
     background-color: var(--color-main-background-blur) !important;
     border: 0px solid !important;
     filter: drop-shadow(0 0px 0px var(--color-box-shadow)) !important;
-    border-radius: 4px !important;
+    border-radius: var(--border-radius-default) !important;
 }
 
 .oc-dialog-buttonrow {
@@ -461,6 +489,158 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
     margin-top: 50px !important;
 }*/
 
+/* Mails*/
+
+/*#message-container {
+    background-color: var(--color-main-background) !important;
+}
+
+.div.WordSection1 {
+    color: #D8D8D8 !important;
+}*/
+
+.envelope--expanded {
+    border: 1px solid !important;
+    border-color: var(--color-border) !important;
+    border-radius: var(--border-radius-default) !important;
+}
+
+/* Talk */
+
+.message-buttons-bar {
+    background-color: var(--color-main-background-blur) !important;
+    border: 1px solid !important;
+    border-color: var(--color-border) !important;
+    box-shadow: none !important;
+    height: 45.6px !important;
+}
+
+.button-vue--icon-only {
+    border-radius: var(--border-radius-default) !important;
+}
+
+.button-vue--vue-primary {
+    border-radius: var(--border-radius-default) !important;
+}
+
+.button-vue--vue-secondary {
+    background-color: var(--color-main-background) !important;
+    border-radius: var(--border-radius-default) !important;
+}
+
+.button-vue--vue-tertiary{
+    border-radius: var(--border-radius-default) !important;
+}
+
+.button-vue--vue-secondary:hover, .icon-menu:hover {
+    background-color: var(--color-background-hover) !important;
+    /* border-radius: 22px !important; */
+}
+
+.button-vue--icon-and-text {
+    background-color: var(--color-background-hover) !important;
+}
+
+.app-navigation-entry__counter {
+    background-color: var(--color-main-background-blur) !important;
+}
+
+.app-navigation-entry:hover .app-navigation-entry__counter {
+    background-color: #444c5600 !important;
+}
+
+.list-item {
+    border-radius: var(--border-radius-default) !important;
+}
+
+.file-preview:hover {
+    background-color: #ffffff00 !important;
+}
+
+.file-preview:hover .file-preview__image.media, .location:hover {
+    outline: none !important;
+}
+
+.message:hover .normal-message-body, .message:hover .normal-message-body {
+    background-color: var(--color-main-background) !important;
+}
+
+.deck-card, .widget-custom, .widget-default {
+    border-width: 1px !important;
+}
+
+.deck-card:hover, .widget-custom:hover, .widget-default:hover {
+    border-width: 1px !important;
+    border-color: var(--color-border-hover) !important;
+}
+
+/* Photos */
+
+.file-container .file__images img, .file-container .file__images .video-icon, .file-container, .files-list-viewer__placeholder, .material-design-icon.video-icon.video-icon, .file-container.selected::after, .file-container::after {
+    border-radius: var(--border-radius-default) !important;
+}
+
+.checkbox-radio-switch, .checkbox-radio-switch:hover, .checkbox-radio-switch__label, .checkbox-radio-switch__label:hover, .checkbox-radio-switch__label:focus, .checkbox-radio-switch__input, .checkbox-radio-switch__input:focus {
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+.material-design-icon__svg  {
+    color: var(--color-primary-light-text) !important;
+}
+
+/* Apps */
+
+.app-level, .official.icon-checkmark {
+    min-width: 137px !important;
+}
+
+/* Public */
+
+#body-public footer {
+    display: none !important;
+}
+
+/* Parameters */
+
+.app-settings__navigation {
+    min-width: 280px !important;
+}
+
+.msg.inlineblock.success {
+    border-radius: var(--border-radius-default) !important;
+    padding: 3px 10px !important;
+    margin-bottom: 5px !important;
+}
+
+/* Menus */
+
+.user-menu__nav ul li a {
+    border-radius: var(--border-radius-default) !important;
+}
+
+.header-menu__content {
+    border-radius: 0px !important;
+}
+
+/* Assistant */
+
+.editable-input, .editable-output {
+    padding-left: 20px !important;
+}
+
+.vs--searchable .vs__dropdown-toggle {
+    max-height: 40px !important;
+}
+
+.vs__selected {
+    margin: 2px 0px 0px 0px !important;
+    position: fixed !important;
+}
+
+#task-select.vs__search {
+    padding-left: 8px !important;
+}
+
 :root {
     --filter-background-blur: blur(8px) !important;
     --body-container-margin: 0px;
@@ -488,7 +668,9 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
     --color-primary: var(--color-primary-default) !important;
     --color-primary-element: var(--color-primary-default) !important;
     --color-primary-light-text: #ffffff !important;
-    --border-radius-large: 4px !important;
-    --border-radius-pill: 4px !important;
+    --border-radius-large: var(--border-radius-default) !important;
+    --border-radius-pill: var(--border-radius-default) !important;
+    --border-radius: var(--border-radius-default) !important;
+    --border-radius-default: 16px !important; /* 25 */
     --folder-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="rgb(123, 131, 143)"><path d="M 1.75 1 A 1.75 1.75 0 0 0 0 2.75 v 10.5 C 0 14.216 0.784 15 1.75 15 h 12.5 A 1.75 1.75 0 0 0 16 13.25 v -8.5 A 1.75 1.75 0 0 0 14.25 3 H 7.5 a 0.25 0.25 0 0 1 -0.2 -0.1 l -0.9 -1.2 C 6.07 1.26 5.55 1 5 1 H 1.75 Z"/></svg>');
 }
