@@ -100,6 +100,7 @@ input, textarea, select, .multiselect__tags, .rich-contenteditable__input {
 
 /* Files */
 
+
 table td.filename .thumbnail[style*="folder"] {
     background-image: var(--folder-icon) !important;
     border-radius: 0px !important;
@@ -177,6 +178,7 @@ table tr[data-has-preview=true] .thumbnail {
 }
 
 .viewcontainer {
+.viewcontainer {
     padding-right: 24px !important;
     padding-left: 24px !important;
 }
@@ -195,6 +197,7 @@ table tr[data-has-preview=true] .thumbnail {
 }
 
 /* Links above files */
+
 
 div.crumb > a, div.crumb > span {
     color: #749af0 !important;
