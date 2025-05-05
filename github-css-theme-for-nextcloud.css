@@ -1,53 +1,15 @@
 /* Custom CSS edits for NC27 */
 
-/* Remove margins for the main content area */
-
-#content, .content {
-    margin-left:0 !important;
-    margin-right:0 !important;
-    margin-bottom:0 !important;
-    width:100% !important;
-    height: calc(var(--body-height) + var(--body-container-margin)) !important;
-}
-
-/* Make input element  corners a bit less rounded
-    (may need some additional classes, as I did not check every detail in the UI) */
-
-input, textarea, select, .multiselect__tags, .rich-contenteditable__input {
-    border-radius: var(--border-radius-default) !important;
-}
-
-/* Fix visual glitches with navigation if there is no background image */
-
-#app-navigation, .app-navigation {
-    -webkit-backdrop-filter: var(--filter-background-blur);
-    backdrop-filter: var(--filter-background-blur);
-}
-
-/* Remove mouse events from quota display in file manager
-    since selecting that element does not do anything */
-
-.app-files #quota {
-    pointer-events:none;
-}
-
 /* Custom styling for markdown editor to have a bit bigger text */
 
 .text-editor__wrapper div.ProseMirror p {
     font-size:16px;
 }
 
-/* Make active menu item icon red */
-
-.app-menu-main .app-menu-entry.app-menu-entry__active {
-    filter: brightness(20%) sepia(20) saturate(150) hue-rotate(45deg) !important;
-}
-
 /* Main menu and login form */
 /* Colors */
 
 #side-menu, #body-login {background: none;}
-.login-box { background-color: var(--color-main-background-blur); }
 #header, #side-menu  { background-color: rgba(23, 23, 23, 0.8) !important; }
 .menu, .header-menu__wrapper{ background-color: rgba(var(--color-main-background-rgb), 0.3) !important; }
 
@@ -65,11 +27,14 @@ input, textarea, select, .multiselect__tags, .rich-contenteditable__input {
     backdrop-filter: none;
 }
 
-
 /* Header*/
 
 #body-public .side-menu-opener {
     display: none !important;
+}
+
+.header-left, .header-right {
+    background-color: var(--color-main-header) !important;
 }
 
 /* Deck */
@@ -80,216 +45,6 @@ input, textarea, select, .multiselect__tags, .rich-contenteditable__input {
     border: 1px solid !important;
     border-color: var(--color-border) !important;
     border-radius: 10px !important;
-}
-
-.icon.due.now {
-    background-color: var(--color-main-header) !important;
-}
-
-.icon.due.overdue {
-    background-color: #7f2e2e !important;
-}
-
-.action.active {
-    border-radius: var(--border-radius-default) !important;
-}
-
-.deck-search input[type=search] {
-    background-position: 12px !important;
-}
-
-/* Files */
-
-table td.filename .thumbnail[style*="folder"] {
-    background-image: var(--folder-icon) !important;
-    border-radius: 0px !important;
-}
-
-table td.filename .thumbnail {
-    border-radius: 4px !important;
-}
-
-.files-filestable tbody {
-    border: 1px solid;
-    border-bottom: none !important;
-    border-radius: var(--border-radius-default) !important;
-    border-color: var(--color-border);
-    background-color: var(--color-main-background-blur);
-}
-
-.thead .summary {
-    border: none !important;
-}
-
-table th {
-    border-top: none !important;
-    border-bottom: none !important;
-}
-
-tr:last-child td:first-child, tr:last-child td:first-child:hover {
-    border-bottom-left-radius: var(--border-radius-default) !important;
-}
-
-tr:last-child td:last-child, tr:last-child td:last-child:hover  {
-    border-bottom-right-radius: var(--border-radius-default) !important;
-}
-
-tr:first-child td:first-child, tr:first-child td:first-child:hover {
-    border-top-left-radius: var(--border-radius-default) !important;
-}
-
-tr:first-child td:last-child, tr:first-child td:last-child:hover {
-    border-top-right-radius: var(--border-radius-default) !important;
-}
-
-.tfoot {
-    border-top: none !important;
-}
-
-#app-navigation-toggle {
-    margin: 8px 0px 0px 8px !important;
-}
-
-.app-sidebar-header__star.button-vue.button-vue--icon-only.button-vue--vue-secondary {
-    background-color: rgba(0,0,0,0) !important;
-}
-
-.app-sidebar-header__star.button-vue.button-vue--icon-only.button-vue--vue-secondary:hover {
-    background-color: var(--color-background-hover) !important;
-}
-
-table tr[data-has-preview=true] .thumbnail {
-    border: none !important;
-}
-
-#header {
-    background-color: var(--color-background-hover);
-}
-
-.files-controls {
-    background-color: var(--color-main-background);
-    width: 100% !important;
-}
-
-#view-toggle {
-    position: absolute;
-    top: 3px !important;
-}
-
-.viewcontainer {
-    padding-right: 24px !important;
-    padding-left: 24px !important;
-}
-
-#files-public-content {
-    padding-right: 24px !important;
-    padding-left: 24px !important;
-}
-
-.name:focus {
-    background-color: var(--color-primary-element-light) !important;
-}
-
-.files-filestable.view-grid:not(.hidden) tbody td.filename .thumbnail-wrapper {
-    z-index: 0 !important;
-}
-
-/* Links above files */
-
-div.crumb > a, div.crumb > span {
-    color: #749af0 !important;
-    opacity: 1 !important;
-    text-align: center;
-}
-
-div.crumb.svg > a, div.crumb.svg.ui-droppable > a {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-    text-align: center;
-}
-
-div.crumb.svg, div.crumb.svg.ui-droppable {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-}
-
-div.crumb > a:hover {
-    text-decoration: underline;
-}
-
-div.crumb {
-    background: none;
-}
-
-div.crumb::after {
-    content: "/";
-    width: 5px;
-    background-color: var(--color-main-background);
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-}
-
-div.crumb.svg.ui-droppable::after {
-    padding-bottom: 12px;
-    padding-top: 12px;
-}
-
-div.crumb.svg::after {
-    padding-bottom: 12px;
-    padding-top: 12px;
-}
-
-div.crumb.svg.crumbhome.ui-droppable::after {
-    display: none !important;
-}
-
-
-div.crumb span.icon-shared {
-    display: none !important;
-}
-
-.icon-home {
-    margin-top: 4px;
-}
-
-/* Button new item */
-.button.new {
-    border: 0px solid;
-    border-radius: var(--border-radius-default);
-    color: #fdfdfd !important;
-    background-color: var(--button-color);
-    margin-top: 5px !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-    height: 22px !important;
-    min-height: 22px !important;
-}
-
-.button.new:hover {
-    background-color: var(--color-btn-primary-hover-bg) !important;
-    /* border: 1px solid !important; */
-    /* border-radius: var(--border-radius-default) !important; */
-    /* border-color: #fdfdfd !important; */
-}
-
-.icon-add {
-    color: #fdfdfd !important;
-}
-
-.creatable {
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
-}
-
-#app-navigation, .app-navigation, .without-app-settings {
-    border-right: 1px solid !important;
-    border-color: var(--color-border-panel) !important;
-}
-
-/* Header */
-.header-left, .header-right {
-    background-color: var(--color-main-header) !important;
 }
 
 /* Side menu opener */
@@ -303,41 +58,54 @@ input, select, textarea, .content-wrapper.text-editor__content-wrapper, .vs__dro
     border-color: var(--color-border) !important;
     background-color: var(--color-entry-background) !important;
     border-radius: var(--border-radius-default) !important;
-    padding-left: 15px !important;
+}
+
+input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content-wrapper:hover, .vs__dropdown-toggle:hover, .multiselect__tags:hover, .comment-form__contenteditable:hover, .rich-contenteditable__input:hover, input:focus, select:focus, textarea:focus, .content-wrapper.text-editor__content-wrapper:focus, .vs__dropdown-toggle:focus, .multiselect__tags:focus, .comment-form__contenteditable:focus, .rich-contenteditable__input:focus, .content-wrapper.text-editor__content-wrapper:active, .content-wrapper.text-editor__content-wrapper:focus-within, .content-wrapper.text-editor__content-wrapper:focus-visible, .multiselect.property__label.multiselect--single:hover {
+    border-color: var(--color-border-hover) !important;
 }
 
 .vs__dropdown-toggle {
     padding-left: 8px !important;
 }
 
-/*
-input, .input-field__input{
-    margin: 0px 3px 0px 3px !important;
-    height: 44px !important;
+
+.input-field__label {
+    background-color: var(--color-entry-background) !important;
+}
+
+/*.modal__card .app-sidebar {
+    min-width: calc(100%) !important;
 }*/
 
-input:hover, select:hover, textarea:hover, .content-wrapper.text-editor__content-wrapper:hover, .vs__dropdown-toggle:hover, .multiselect__tags:hover, .comment-form__contenteditable:hover, .rich-contenteditable__input:hover, input:focus, select:focus, textarea:focus, .content-wrapper.text-editor__content-wrapper:focus, .vs__dropdown-toggle:focus, .multiselect__tags:focus, .comment-form__contenteditable:focus, .rich-contenteditable__input:focus, .content-wrapper.text-editor__content-wrapper:active, .content-wrapper.text-editor__content-wrapper:focus-within, .content-wrapper.text-editor__content-wrapper:focus-visible, .multiselect.property__label.multiselect--single:hover {
-    border-color: var(--color-border-hover) !important;
-}
-
 /* Rich space */
-#rich-workspace, .focus.creatable {
-    padding: 0px !important;
 
+.tiptap.ProseMirror:hover {
+    box-shadow: none !important;
 }
 
-.content-wrapper.text-editor__content-wrapper {
+.save-status.saved, .save-status:hover, .v-popper.session-list.v-popper--theme-dropdown {
+    background-color: #0000 !important;
+}
+
+.avatardiv.icon-group {
     border-radius: var(--border-radius-default) !important;
 }
+
+.avatar-list {
+    margin: 0 !important;
+}
+
+/*.text-editor__wrapper div.ProseMirror table {
+    width: calc(100% - 50px) !important;
+}*/
 
 /* Menus */
-.app-navigation-entry.router-link-exact-active.active, 
-#app-navigation:not(.vue)>ul>li.active, #app-navigation:not(.vue)>ul>li.active>a, .button.single-alt-login-option, .button-vue.button-vue--text-only.button-vue--vue-secondary.button-vue--wide.register-button, .button-vue.button-vue--text-only.button-vue--vue-tertiary.button-vue--wide {
-    background-color: var(--color-main-background) !important;
+
+#app-navigation:not(.vue)>ul>li:hover, #app-navigation:not(.vue)>ul>li>a:hover, .button.single-alt-login-option:hover, .button-vue.button-vue--text-only.button-vue--vue-secondary.button-vue--wide.register-button:hover {
     border-radius: var(--border-radius-default) !important;
 }
 
-#app-navigation:not(.vue)>ul>li:hover, #app-navigation:not(.vue)>ul>li>a:hover, .button.single-alt-login-option:hover, .button-vue.button-vue--text-only.button-vue--vue-secondary.button-vue--wide.register-button:hover {
+.user-menu ul li a, .user-menu ul li button {
     border-radius: var(--border-radius-default) !important;
 }
 
@@ -524,7 +292,7 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
 }
 
 .button-vue--vue-secondary {
-    background-color: var(--color-main-background) !important;
+    /* background-color: var(--color-main-background) !important; */
     border-radius: var(--border-radius-default) !important;
 }
 
@@ -533,12 +301,12 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
 }
 
 .button-vue--vue-secondary:hover, .icon-menu:hover {
-    background-color: var(--color-background-hover) !important;
+    /* background-color: var(--color-background-hover) !important; */
     /* border-radius: 22px !important; */
 }
 
 .button-vue--icon-and-text {
-    background-color: var(--color-background-hover) !important;
+    /* background-color: var(--color-background-hover) !important; */
 }
 
 .app-navigation-entry__counter {
@@ -565,19 +333,24 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
     background-color: var(--color-main-background) !important;
 }
 
-.deck-card, .widget-custom, .widget-default {
+.deck-card, .widget-custom, .widget-default, .quote {
     border-width: 1px !important;
 }
 
-.deck-card:hover, .widget-custom:hover, .widget-default:hover {
+.deck-card:hover, .widget-custom:hover, .widget-default:hover, .quote:hover {
     border-width: 1px !important;
     border-color: var(--color-border-hover) !important;
 }
 
+.quote::before {
+    background-color: var(--color-primary) !important;
+}
+
+
 /* Photos */
 
 .file-container .file__images img, .file-container .file__images .video-icon, .file-container, .files-list-viewer__placeholder, .material-design-icon.video-icon.video-icon, .file-container.selected::after, .file-container::after {
-    border-radius: var(--border-radius-default) !important;
+    border-radius: 8px !important;
 }
 
 .checkbox-radio-switch, .checkbox-radio-switch:hover, .checkbox-radio-switch__label, .checkbox-radio-switch__label:hover, .checkbox-radio-switch__label:focus, .checkbox-radio-switch__input, .checkbox-radio-switch__input:focus {
@@ -586,6 +359,10 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
 
 .material-design-icon__svg  {
     color: var(--color-primary-light-text) !important;
+}
+
+.file-container .selection-checkbox[data-v-0810a56d] .checkbox-radio-switch__content {
+    background-color: var(--color-background-hover) !important;
 }
 
 /* Apps */
@@ -634,11 +411,81 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
 
 .vs__selected {
     margin: 2px 0px 0px 0px !important;
-    position: fixed !important;
 }
 
 #task-select.vs__search {
     padding-left: 8px !important;
+}
+
+/* Maps */
+.leaflet-marker-photo-suggestion, .leaflet-marker-photo, .leaflet-marker-photo-suggestion-selected {
+    border: none !important;
+}
+
+.sidebar.leaflet-touch, .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: none !important;
+}
+
+.leaflet-control-attribution.leaflet-control {
+    display: none !important;
+}
+
+.sidebar.collapsed {
+    width: 40px !important;
+}
+
+.sidebar-tabs {
+    height: 34% !important;
+    border-bottom-left-radius: var(--border-radius, 4px) !important;
+    border-bottom-right-radius: var(--border-radius, 4px) !important;
+    border-top-left-radius: var(--border-radius, 4px) !important;
+}
+
+.leaflet-left .leaflet-control-scale {
+    margin-left: 10px !important;
+}
+
+.leaflet-container .leaflet-control-mouseposition {
+    display: none !important;
+    box-shadow: none !important;
+}
+
+.leaflet-container {
+    background: #262626 !important;
+}
+
+.thumbnail {
+    border-radius: 8px !important;
+}
+
+.leaflet-tooltip.leaflet-marker-photo-tooltip.leaflet-zoom-animated.leaflet-tooltip-right {
+    border: none !important;
+    border-radius: var(--border-radius-default) !important;
+    padding: 0px !important;
+}
+
+.photo-tooltip {
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+/* Files */
+
+.files-list .files-list__row:hover .favorite-marker-icon svg path {
+    stroke: #353d45 !important;
+}
+
+.material-design-icon.checkbox-blank-outline-icon .material-design-icon__svg {
+    color: #ffffff30 !important;
+}
+
+.files-list .files-list__row-icon-preview {
+    border-radius: 4px !important;
+}
+
+/* Office */
+.main-nav.hasnotebookbar:not(.readonly), .hasnotebookbar {
+    background-color: #1c1c1c !important;
 }
 
 :root {
@@ -665,9 +512,6 @@ div.select2-container-multi .select2-choices, div.select2-container-multi.select
     --button-color: #347d39;
     --color-btn-primary-hover-bg: #46954a;
     --color-entry-background: var(--color-main-background-blur);
-    --color-primary: var(--color-primary-default) !important;
-    --color-primary-element: var(--color-primary-default) !important;
-    --color-primary-light-text: #ffffff !important;
     --border-radius-large: var(--border-radius-default) !important;
     --border-radius-pill: var(--border-radius-default) !important;
     --border-radius: var(--border-radius-default) !important;
